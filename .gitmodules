@@ -1,0 +1,21 @@
+[submodule "src/dependencies/hdl/ethzasl_msf"]
+	path = src/dependencies/hdl/ethzasl_msf
+	url = https://github.com/ethz-asl/ethzasl_msf.git
+[submodule "src/dependencies/hdl/fast_gicp"]
+	path = src/dependencies/hdl/fast_gicp
+	url = https://github.com/SMRT-AIST/fast_gicp
+[submodule "src/dependencies/hdl/glog_catkin"]
+	path = src/dependencies/hdl/glog_catkin
+	url = https://github.com/ethz-asl/glog_catkin
+[submodule "src/dependencies/hdl/hdl_graph_slam"]
+	path = src/dependencies/hdl/hdl_graph_slam
+	url = https://github.com/koide3/hdl_graph_slam
+[submodule "src/dependencies/hdl/ndt_omp"]
+	path = src/dependencies/hdl/ndt_omp
+	url = https://github.com/koide3/ndt_omp
+[submodule "src/dependencies/r2live"]
+	path = src/dependencies/r2live
+	url = https://github.com/hku-mars/r2live
+[submodule "src/dependencies/hdl/catkin_simple"]
+	path = src/dependencies/hdl/catkin_simple
+	url = https://github.com/catkin/catkin_simple.git

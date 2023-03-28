@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="use_sim_time" value="true"/>
+    <arg name="bag_file" default="site1_handheld_1"/>
+
+    <remap from="/gpsimu_driver/imu_data" to="/alphasense/imu"/>
+    <include file="$(find hdl_graph_slam)/launch/hdl_graph_slam_400.launch">
+        <arg name="points_topic" value="/hesai/pandar" />
+        <!-- <arg name="imu_topic" default="/alphasense/imu" /> -->
+        <!-- <arg name="imu_topic" value="/gpsimu_driver/imu_data"/>
+        <arg name="enable_imu_acc" value="true" />
+        <arg name="enable_imu_ori" value="true" /> -->
+    </include>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hilti)/rviz/hdl_graph_slam.rviz"/>
+
+    <node pkg="rosbag" type="play" name="player" output="log" args="--clock $(find hilti)/bag/$(arg bag_file).bag"/>
+</launch>
