@@ -2,6 +2,7 @@
 <launch>
     <param name="use_sim_time" value="true"/>
     <arg name="bag_file" default="site1_handheld_1"/>
+    <!-- <arg name="bag_file" default="calibration_handheld"/> -->
 
     <remap from="/gpsimu_driver/imu_data" to="/alphasense/imu"/>
     <include file="$(find hdl_graph_slam)/launch/hdl_graph_slam_400.launch">

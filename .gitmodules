@@ -19,3 +19,6 @@
 [submodule "src/dependencies/hdl/catkin_simple"]
 	path = src/dependencies/hdl/catkin_simple
 	url = https://github.com/catkin/catkin_simple.git
+[submodule "src/dependencies/r3live"]
+	path = src/dependencies/r3live
+	url = https://github.com/hku-mars/r3live
