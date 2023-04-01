@@ -1,6 +1,3 @@
-[submodule "src/dependencies/hdl/ethzasl_msf"]
-	path = src/dependencies/hdl/ethzasl_msf
-	url = https://github.com/ethz-asl/ethzasl_msf.git
 [submodule "src/dependencies/hdl/fast_gicp"]
 	path = src/dependencies/hdl/fast_gicp
 	url = https://github.com/SMRT-AIST/fast_gicp
@@ -22,3 +19,6 @@
 [submodule "src/dependencies/r3live"]
 	path = src/dependencies/r3live
 	url = https://github.com/hku-mars/r3live
+[submodule "src/dependencies/hdl/ethzasl_msf"]
+	path = src/dependencies/hdl/ethzasl_msf
+	url = https://github.com/Abanesjo/ethzasl_msf.git
