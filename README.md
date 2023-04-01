@@ -4,6 +4,7 @@ Submission for the 2023 HILTI SLAM Challenge.
 The bag files can be downloaded from the challenge website:
 
 [https://hilti-challenge.com/dataset-2023.html](https://hilti-challenge.com/dataset-2023.html)
+
 Place them in the **smart_hilti_2023/src/hilti/bag** folder before building if you are using them.
 
 ## Installation
