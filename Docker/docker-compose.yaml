@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  smart_hilti:
+    image: smart_hilti:1.0
+    container_name: smart_hilti
+    network_mode: "host"
+    stdin_open: true
+    tty: true
+    privileged: true
+    environment: 
+      - DISPLAY
+      - QT_X11_NO_MITSHM=1
+
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+

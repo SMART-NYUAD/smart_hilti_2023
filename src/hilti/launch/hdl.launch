@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <launch>
     <param name="use_sim_time" value="true"/>
-    <arg name="bag_file" default="site1_handheld_1"/>
-    <!-- <arg name="bag_file" default="calibration_handheld"/> -->
+    <!-- <arg name="bag_file" default="site1_handheld_1"/> -->
+    <arg name="bag_file" default="calibration_handheld"/>
 
-    <include file="$(find hdl_graph_slam)/launch/hdl_graph_slam_imu.launch">
+    <include file="$(find hdl_graph_slam)/launch/hdl_graph_slam_400.launch">
         <arg name="enable_imu_acc" value="true" />
         <arg name="enable_imu_ori" value="true" />
         <arg name="enable_floor_detection" default="false" />
