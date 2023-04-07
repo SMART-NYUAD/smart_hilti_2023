@@ -13,7 +13,7 @@ WORKDIR /home/catkin_ws
 
 COPY ../src src
 
-RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd ~/catkin_ws; catkin build;'
+RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/catkin_ws; catkin build;'
 
 RUN echo "source /home/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
