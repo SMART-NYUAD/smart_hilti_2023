@@ -11,7 +11,7 @@ RUN cd home \
 
 WORKDIR /home/catkin_ws
 
-COPY ../src src
+COPY src src
 
 RUN /bin/bash -c '. /opt/ros/melodic/setup.bash; cd /home/catkin_ws; catkin build;'
 
