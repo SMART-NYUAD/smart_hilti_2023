@@ -42,8 +42,8 @@ git clone --recurse-submodules https://github.com/SMART-NYUAD/smart_hilti_2023.g
 If you are using bag files, place them in the **smart_hilti_2023/src/hilti/bag** folder before proceeding
 ```
 cd smart_hilti_2023
-sudo docker build -t smart_hilti:1.0 -f Docker/Dockerfile .
-docker-compose up
+docker build -t smart_hilti:1.0 -f Docker/Dockerfile .
+docker compose -f Docker/docker-compose.yaml up
 ```
 With this, the docker container should be running. To execute commands, create a new terminal (but keep this current one running). In a new terminal, execute the following
 ```
