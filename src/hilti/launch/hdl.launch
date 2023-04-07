@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <launch>
+    <arg name="use_rviz" default="false"/>
     <param name="use_sim_time" value="true"/>
-    <!-- <arg name="bag_file" default="site1_handheld_1"/> -->
-    <arg name="bag_file" default="calibration_handheld"/>
+    <arg name="bag_file" default="site1_handheld_1"/>
+    <!-- <arg name="bag_file" default="calibration_handheld"/> -->
 
     <include file="$(find hdl_graph_slam)/launch/hdl_graph_slam_400.launch">
         <arg name="enable_imu_acc" value="true" />
@@ -10,7 +11,8 @@
         <arg name="enable_floor_detection" default="false" />
     </include>
 
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hilti)/rviz/hdl_graph_slam.rviz"/>
+    <!-- If not using docker, uncomment the following line for visualization -->
+    <node if="$(arg use_rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(find hilti)/rviz/hdl_graph_slam.rviz"/>
 
     <node pkg="rosbag" type="play" name="player" output="log" args="--clock -r 0.5 $(find hilti)/bag/$(arg bag_file).bag">
         <remap from="/hesai/pandar" to="/velodyne_points"/>

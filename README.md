@@ -45,15 +45,22 @@ cd smart_hilti_2023/Docker
 docker build -t smart_hilti:1.0 -f Dockerfile ..
 docker-compose up
 ```
-Create a new terminal (but keep this current one running). In a new terminal, execute the following
+With this, the docker container should be running. To execute commands, create a new terminal (but keep this current one running). In a new terminal, execute the following
 ```
 docker exec -it smart_hilti bash
-source devel/setup.bash
 ```
-With this you should have a working docker container. In case you need another terminal for the container, simply repeat the last two commands in the new terminal. 
+This gives you another terminal that has access to the existing docker container. In case you need another terminal for the container, simply repeat the command in another terminal window.  
 
 ## Usage
 For testing hdl_graph_slam, execute the following
 ```
 roslaunch hilti hdl.launch
+```
+If you are running this natively, or with nvidia-docker which grants GUI capabilities, then the visualization can be used by adding the following argument
+```
+roslaunch hilti hdl.launch use_rviz:="true"
+```
+Then in in another terminal window, launch the following to publish the measured transformation.
+```
+rosrun tf tf_echo odom base_link
 ```
