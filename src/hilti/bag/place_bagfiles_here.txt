@@ -1,0 +1,1 @@
+(This is just here so github adds the bag folder while still ignoring the .bag files)

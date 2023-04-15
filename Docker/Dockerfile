@@ -3,6 +3,8 @@ FROM osrf/ros:melodic-desktop-full
 RUN sudo apt-get update && \ 
     sudo apt-get -y install autoconf libtool && \
     sudo apt-get -y install ros-melodic-geodesy ros-melodic-pcl-ros ros-melodic-nmea-msgs ros-melodic-libg2o && \
+    sudo apt -y install libeigen3-dev \
+    sudo apt -y install libpcl-dev \
     sudo apt -y install python3-pip && \
     sudo pip3 install -U catkin_tools
 
