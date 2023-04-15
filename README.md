@@ -52,6 +52,8 @@ docker exec -it smart_hilti bash
 This gives you another terminal that has access to the existing docker container. In case you need another terminal for the container, simply repeat the command in another terminal window.  
 
 ## Usage
+
+### hdl_graph_slam
 For testing hdl_graph_slam, execute the following
 ```
 roslaunch hilti hdl.launch
@@ -60,7 +62,13 @@ If you are running this natively, or with nvidia-docker which grants GUI capabil
 ```
 roslaunch hilti hdl.launch use_rviz:="true"
 ```
-Then in in another terminal window, launch the following to publish the measured transformation.
+### fast_lio
+For fast_lio with loop closure, execute the following
+```
+roslaunch hilti fast_lio.launch
+```
+## Publishing Transformations
+In another terminal window, launch the following to publish the measured transformation.
 ```
 rosrun tf tf_echo odom base_link
 ```
