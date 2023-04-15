@@ -22,3 +22,6 @@
 [submodule "src/dependencies/hdl/ethzasl_msf"]
 	path = src/dependencies/hdl/ethzasl_msf
 	url = https://github.com/Abanesjo/ethzasl_msf.git
+[submodule "src/dependencies/fast_lio/FAST_LIO_LC"]
+	path = src/dependencies/fast_lio/FAST_LIO_LC
+	url = https://github.com/Abanesjo/FAST_LIO_LC.git
