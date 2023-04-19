@@ -13,8 +13,20 @@ The package is tested on ROS Melodic running on Ubuntu 18.04. To build from sour
 Install dependencies. 
 ```
 sudo apt-get update 
+<!-- hdl_graph_slam -->
 sudo apt-get -y install autoconf libtool
 sudo apt-get -y install ros-melodic-geodesy ros-melodic-pcl-ros ros-melodic-nmea-msgs ros-melodic-libg2o
+
+<!-- fast_lio -->
+sudo apt -y install libpcl-dev
+sudo apt -y install libeigen3-dev
+sudo add-apt-repository ppa:borglab/gtsam-release-4.0
+sudo apt update
+sudo apt install libgtsam4 libgtsam-dev libgtsam-unstable4 libgtsam-unstable-dev
+
+
+
+<!-- catkin build -->
 sudo apt -y install python3-pip
 sudo pip3 install -U catkin_tools
 ```
