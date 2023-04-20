@@ -24,8 +24,6 @@ sudo add-apt-repository ppa:borglab/gtsam-release-4.0
 sudo apt update
 sudo apt install libgtsam4 libgtsam-dev libgtsam-unstable4 libgtsam-unstable-dev
 
-
-
 <!-- catkin build -->
 sudo apt -y install python3-pip
 sudo pip3 install -U catkin_tools

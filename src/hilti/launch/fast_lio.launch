@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <launch>
-    <arg name="bag_file" value="fast_lio_lc"/>
+    <param name="use_sim_time" value="true"/>
+    <arg name="bag_file" default="site1_handheld_1"/>
 
     <include file="$(find fast_lio)/launch/mapping_velodyne.launch">
     </include>
@@ -8,6 +9,15 @@
     <include file="$(find aloam_velodyne)/launch/fastlio_velodyne_VLP_16.launch">
     </include>
 
-    <node pkg="rosbag" type="play" name="player" output="log" args="--clock -r 2 $(find hilti)/bag/$(arg bag_file).bag">
+    <node pkg="rosbag" type="play" name="player" output="log" args="--clock -r 0.1 $(find hilti)/bag/$(arg bag_file).bag">
+        <remap from="/alphasense/imu" to="/imu/data"/>
+        <remap from="/hesai/pandar" to="/velodyne_points_raw"/>
     </node>
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="body_to_pandar" args="0 0 0 0 0 0 velodyne PandarXT-32 150"/> -->
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="odom_to_camera_init" args="0 0 0 0 0 0 odom camera_init 10"/> -->
+
+    <!-- <node name="rviz" pkg="rviz" type="rviz"/> -->
+
 </launch>
