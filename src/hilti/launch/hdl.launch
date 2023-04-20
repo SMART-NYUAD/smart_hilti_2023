@@ -6,8 +6,8 @@
     <!-- <arg name="bag_file" default="calibration_handheld"/> -->
 
     <include file="$(find hdl_graph_slam)/launch/hdl_graph_slam_400.launch">
-        <arg name="enable_imu_acc" value="true" />
-        <arg name="enable_imu_ori" value="true" />
+        <arg name="enable_imu_acc" value="false" />
+        <arg name="enable_imu_ori" value="false" />
         <arg name="enable_floor_detection" default="false" />
     </include>
 
@@ -19,5 +19,7 @@
         <remap from="/alphasense/imu" to="/gpsimu_driver/imu_data"/>
     </node>
 
-    <node pkg="tf" type="static_transform_publisher" name="lidar_publisher" args="0 0 0 0 0 0 base_link PandarXT-32 10" />
+    <node pkg="tf" type="static_transform_publisher" name="lidar_publisher" args="0 0 0 0 0 0 base_link PandarXT-32 300" />
+
+    <node pkg="tf" type="static_transform_publisher" name="imu_publisher" args="0 0 0 0 0 0 base_link imu_sensor_frame 300" />
 </launch>

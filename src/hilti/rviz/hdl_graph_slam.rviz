@@ -8,6 +8,8 @@ Panels:
         - /Status1
         - /3D SLAM1
         - /MarkerArray1/Namespaces1
+        - /Imu1
+        - /Imu1/Status1
       Splitter Ratio: 0.5
     Tree Height: 307
   - Class: rviz/Selection
@@ -63,6 +65,8 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
+        imu_sensor_frame:
+          Value: true
         keyframe:
           Value: true
         map:
@@ -81,6 +85,8 @@ Visualization Manager:
           odom:
             base_link:
               PandarXT-32:
+                {}
+              imu_sensor_frame:
                 {}
               velodyne:
                 {}
@@ -224,6 +230,15 @@ Visualization Manager:
       Transport Hint: raw
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Class: rviz_plugin_tutorials/Imu
+      Color: 204; 51; 204
+      Enabled: true
+      History Length: 1
+      Name: Imu
+      Topic: /gpsimu_driver/imu_data
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -252,25 +267,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 84.05326080322266
+      Distance: 65.68502044677734
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 21.426368713378906
-        Y: 22.693384170532227
-        Z: -24.792865753173828
+        X: 27.14277458190918
+        Y: 31.778411865234375
+        Z: -10.910683631896973
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 0.3347975015640259
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.169960975646973
+      Yaw: 5.4849534034729
     Saved: ~
 Window Geometry:
   Displays:

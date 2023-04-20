@@ -13,7 +13,8 @@ def pointcloud_formatter():
     
 def subscriber_callback(data):
     # data.fields[4], data.fields[5] = data.fields[5], data.fields[4]
-    data.fields[5].name = "time"
+    data.fields[4].name = "time"
+    data.fields[4].datatype = 7
     print(data.fields)
     pub.publish(data)
 
