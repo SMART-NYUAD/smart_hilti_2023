@@ -24,6 +24,19 @@ sudo apt -y install libeigen3-dev
 sudo add-apt-repository ppa:borglab/gtsam-release-4.0
 sudo apt update
 sudo apt install libgtsam4 libgtsam-dev libgtsam-unstable4 libgtsam-unstable-dev
+sudo apt-get install cmake
+sudo apt-get install libgoogle-glog-dev libgflags-dev
+sudo apt-get install libatlas-base-dev
+sudo apt-get install libsuitesparse-dev
+
+#Ceres solver (for fast_lio)
+wget http://ceres-solver.org/ceres-solver-2.1.0.tar.gz
+tar zxf ceres-solver-2.1.0.tar.gz
+cd ceres-solver-2.1.0
+mkdir build
+cd build
+cmake ..
+make install
 
 #catkin build
 sudo apt -y install python3-pip
@@ -36,6 +49,7 @@ git clone --recurse-submodules https://github.com/SMART-NYUAD/smart_hilti_2023.g
 If you are using bag files, place them in the **smart_hilti_2023/src/hilti/bag** folder before proceeding
 ```
 cd smart_hilti_2023
+rosdep install --from-paths src --ignore-src -r -y
 catkin build
 source devel/setup.bash
 ```
