@@ -36,7 +36,7 @@ cd ceres-solver-2.1.0
 mkdir build
 cd build
 cmake ..
-make install
+sudo make install
 
 #catkin build
 sudo apt -y install python3-pip
