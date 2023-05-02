@@ -22,3 +22,6 @@
 [submodule "src/dependencies/hdl/ethzasl_msf"]
 	path = src/dependencies/hdl/ethzasl_msf
 	url = https://github.com/Abanesjo/ethzasl_msf.git
+[submodule "src/r2live"]
+	path = src/r2live
+	url = https://github.com/hku-mars/r2live.git
