@@ -22,3 +22,6 @@
 [submodule "src/dependencies/hdl/gflags_catkin"]
 	path = src/dependencies/hdl/gflags_catkin
 	url = https://github.com/ethz-asl/gflags_catkin.git
+[submodule "src/dependencies/faster-lio"]
+	path = src/dependencies/faster-lio
+	url = https://github.com/gaoxiang12/faster-lio.git
