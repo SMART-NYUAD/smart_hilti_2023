@@ -16,12 +16,9 @@
 [submodule "src/dependencies/hdl/catkin_simple"]
 	path = src/dependencies/hdl/catkin_simple
 	url = https://github.com/catkin/catkin_simple.git
-[submodule "src/dependencies/r3live"]
-	path = src/dependencies/r3live
-	url = https://github.com/hku-mars/r3live
 [submodule "src/dependencies/hdl/ethzasl_msf"]
 	path = src/dependencies/hdl/ethzasl_msf
 	url = https://github.com/Abanesjo/ethzasl_msf.git
-[submodule "src/r2live"]
-	path = src/dependencies/r2live
-	url = https://github.com/hku-mars/r2live.git
+[submodule "src/dependencies/hdl/gflags_catkin"]
+	path = src/dependencies/hdl/gflags_catkin
+	url = https://github.com/ethz-asl/gflags_catkin.git
