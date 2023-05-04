@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="bag_file" value="fast_lio_lc"/>
+
+    <include file="$(find fast_lio)/launch/mapping_velodyne.launch"/>
+
+    <include file="$(find aloam_velodyne)/launch/fastlio_velodyne_VLP_16.launch"/>
+
+    <node pkg="rosbag" type="play" name="player" output="log" args="--clock -r 2 $(find hilti)/bag/$(arg bag_file).bag">
+        <!-- <remap from="/imu/data" to="/NotAvail"/> -->
+        <!-- <remap from="/velodyne_points" to="/velodyne_points_raw"/> -->
+    </node>
+</launch>

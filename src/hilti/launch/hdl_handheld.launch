@@ -14,6 +14,3 @@
     <include file="$(find hdl_graph_slam)/launch/hdl_graph_slam_501.launch">
         <arg name="enable_floor_detection" default="false" />
     </include>
-
-    <node pkg="tf" type="static_transform_publisher" name="lidar_publisher" args="0 0 0 0 0 0 base_link PandarXT-32 10" />
-</launch>
