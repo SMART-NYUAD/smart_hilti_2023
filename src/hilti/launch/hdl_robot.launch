@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="use_rviz" default="true"/>
+    <param name="use_sim_time" value="true"/>
+    <arg name="bag_file" default="site2_robot_2"/>
+
+    <!-- If not using docker, uncomment the following line for visualization -->
+    <node if="$(arg use_rviz)" name="rviz" pkg="rviz" type="rviz" args="-d $(find hilti)/rviz/hdl_robot.rviz"/>
+
+    <include file="$(find hdl_graph_slam)/launch/hdl_graph_slam_501.launch">
+        <arg name="enable_floor_detection" default="false" />
+    </include>
+
+    <node pkg="rosbag" type="play" name="player" output="log" args="--clock -r 0.5 $(find hilti)/bag/$(arg bag_file).bag">
+        <remap from="/rslidar_points" to="/velodyne_points"/>
+
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="lidar_publisher" args="0 0 0 0 0 0 base_link rslidar 300" />
+</launch>

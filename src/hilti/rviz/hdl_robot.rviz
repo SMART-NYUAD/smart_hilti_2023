@@ -1,15 +1,15 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 0
+    Help Height: 125
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Floor Points1
         - /MarkerArray1/Namespaces1
-        - /Image1
       Splitter Ratio: 0.5
-    Tree Height: 432
+    Tree Height: 307
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -69,7 +69,11 @@ Visualization Manager:
           Value: true
         rslidar:
           Value: true
+        state:
+          Value: true
         velodyne:
+          Value: true
+        world:
           Value: true
       Marker Scale: 1
       Name: TF
@@ -86,6 +90,9 @@ Visualization Manager:
                 {}
             keyframe:
               {}
+            world:
+              state:
+                {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -104,7 +111,7 @@ Visualization Manager:
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
-      Name: PointCloud2
+      Name: Raw Input
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
@@ -125,6 +132,34 @@ Visualization Manager:
       Axis: Z
       Channel Name: intensity
       Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: Filtered Input
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /filtered_points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
       Color: 59; 0; 255
       Color Transformer: FlatColor
       Decay Time: 0
@@ -132,7 +167,7 @@ Visualization Manager:
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Min Color: 0; 0; 0
-      Name: PointCloud2
+      Name: Floor Points
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
@@ -170,34 +205,6 @@ Visualization Manager:
       Size (m): 0.019999999552965164
       Style: Flat Squares
       Topic: /hdl_graph_slam/map_points
-      Unreliable: false
-      Use Fixed Frame: true
-      Use rainbow: true
-      Value: true
-    - Alpha: 1
-      Autocompute Intensity Bounds: true
-      Autocompute Value Bounds:
-        Max Value: 10
-        Min Value: -10
-        Value: true
-      Axis: Z
-      Channel Name: intensity
-      Class: rviz/PointCloud2
-      Color: 255; 255; 255
-      Color Transformer: Intensity
-      Decay Time: 0
-      Enabled: true
-      Invert Rainbow: false
-      Max Color: 255; 255; 255
-      Min Color: 0; 0; 0
-      Name: PointCloud2
-      Position Transformer: XYZ
-      Queue Size: 10
-      Selectable: true
-      Size (Pixels): 3
-      Size (m): 0.009999999776482582
-      Style: Flat Squares
-      Topic: /filtered_points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -252,25 +259,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 22.494537353515625
+      Distance: 21.132165908813477
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 4.140756130218506
-        Y: -5.516678333282471
-        Z: 13.608502388000488
+        X: 3.7680258750915527
+        Y: -5.690649032592773
+        Z: 12.003195762634277
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: -0.9597969055175781
+      Pitch: 0.07020273059606552
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 6.259976863861084
+      Yaw: 6.274962425231934
     Saved: ~
 Window Geometry:
   Displays:
