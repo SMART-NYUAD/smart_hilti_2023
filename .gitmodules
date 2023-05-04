@@ -9,7 +9,7 @@
 	url = https://github.com/koide3/hdl_graph_slam
 [submodule "src/dependencies/hdl/ndt_omp"]
 	path = src/dependencies/hdl/ndt_omp
-	url = https://github.com/koide3/ndt_omp
+	url = https://github.com/Abanesjo/hdl_graph_slam.git
 [submodule "src/dependencies/r2live"]
 	path = src/dependencies/r2live
 	url = https://github.com/hku-mars/r2live
@@ -18,7 +18,7 @@
 	url = https://github.com/catkin/catkin_simple.git
 [submodule "src/dependencies/hdl/ethzasl_msf"]
 	path = src/dependencies/hdl/ethzasl_msf
-	url = https://github.com/Abanesjo/ethzasl_msf.git
+	url = https://github.com/ethz-asl/ethzasl_msf.git
 [submodule "src/dependencies/hdl/gflags_catkin"]
 	path = src/dependencies/hdl/gflags_catkin
 	url = https://github.com/ethz-asl/gflags_catkin.git
