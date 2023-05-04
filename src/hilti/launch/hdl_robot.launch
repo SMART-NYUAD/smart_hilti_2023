@@ -15,4 +15,6 @@
     </include>
 
     <node pkg="tf" type="static_transform_publisher" name="lidar_publisher" args="0 0 0 0 0 0 base_link rslidar 300" />
+
+    <node pkg="hilti" type="output_writer.py" name="output_writer" args="odom base_link $(find hilti)/out/$(arg bag_file).txt" output="screen" launch-prefix="xterm -e"/>
 </launch>

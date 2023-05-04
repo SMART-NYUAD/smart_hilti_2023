@@ -4,3 +4,5 @@ build/
 devel/
 logs/
 *.bag
+src/hilti/out/*
+!src/hilti/out/output_files_here.txt
