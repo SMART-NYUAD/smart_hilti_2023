@@ -22,9 +22,6 @@
 [submodule "src/dependencies/hdl/ethzasl_msf"]
 	path = src/dependencies/hdl/ethzasl_msf
 	url = https://github.com/Abanesjo/ethzasl_msf.git
-[submodule "src/dependencies/fast_lio/FAST_LIO"]
-	path = src/dependencies/fast_lio/FAST_LIO
-	url = https://github.com/Abanesjo/FAST_LIO.git
 [submodule "src/dependencies/fast_lio/A-LOAM-FOR-HESAI"]
 	path = src/dependencies/fast_lio/A-LOAM-FOR-HESAI
 	url = https://github.com/Abanesjo/A-LOAM-FOR-HESAI.git
