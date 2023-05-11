@@ -25,9 +25,9 @@
 [submodule "src/dependencies/fast_lio/A-LOAM-FOR-HESAI"]
 	path = src/dependencies/fast_lio/A-LOAM-FOR-HESAI
 	url = https://github.com/Abanesjo/A-LOAM-FOR-HESAI.git
-[submodule "src/dependencies/fast_lio/FAST_LIO"]
-	path = src/dependencies/fast_lio/FAST_LIO
-	url = https://github.com/hku-mars/FAST_LIO.git
 [submodule "src/dependencies/fast_lio/livox_ros_driver"]
 	path = src/dependencies/fast_lio/livox_ros_driver
 	url = https://github.com/Livox-SDK/livox_ros_driver.git
+[submodule "src/dependencies/fast_lio/FAST_LIO_SLAM"]
+	path = src/dependencies/fast_lio/FAST_LIO_SLAM
+	url = https://github.com/JzHuai0108/FAST_LIO_SLAM.git
