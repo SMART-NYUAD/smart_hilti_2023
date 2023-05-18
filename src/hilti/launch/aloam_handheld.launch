@@ -1,3 +1,4 @@
+<!-- This launch file is deprecated. A previous solution involved A-LOAM-FOR-HESAI, but this was replaced by fast_lio_slam which already implements A-LOAM. -->
 <launch>
 	<arg name="rviz" default="true"/>
 	<arg name="bag_file" default="site1_handheld_1"/>
