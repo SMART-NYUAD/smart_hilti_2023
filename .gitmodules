@@ -22,12 +22,12 @@
 [submodule "src/dependencies/hdl/ethzasl_msf"]
 	path = src/dependencies/hdl/ethzasl_msf
 	url = https://github.com/Abanesjo/ethzasl_msf.git
-[submodule "src/dependencies/fast_lio/A-LOAM-FOR-HESAI"]
-	path = src/dependencies/fast_lio/A-LOAM-FOR-HESAI
-	url = https://github.com/Abanesjo/A-LOAM-FOR-HESAI.git
 [submodule "src/dependencies/fast_lio/livox_ros_driver"]
 	path = src/dependencies/fast_lio/livox_ros_driver
 	url = https://github.com/Livox-SDK/livox_ros_driver.git
 [submodule "src/dependencies/fast_lio/FAST_LIO_SLAM"]
 	path = src/dependencies/fast_lio/FAST_LIO_SLAM
 	url = https://github.com/JzHuai0108/FAST_LIO_SLAM.git
+[submodule "src/dependencies/lidar_slam_3d"]
+	path = src/dependencies/lidar_slam_3d
+	url = https://github.com/ningwang1028/lidar_slam_3d.git
